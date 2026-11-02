@@ -3,7 +3,6 @@
 A single-page website for **Bundle Up Care Foundation**, a charity that collects clothes, shoes and toys from well-wishers and distributes them to families raising children aged 0-5.
 
 **Founder & Owner:** Maureen Chebet
-**Contact:** +44 7464 612369
 
 ---
 
@@ -28,24 +27,23 @@ The only external resource is Google Fonts (Fraunces, Karla and Petit Formal Scr
 | How it works | Give, collect, sort, deliver |
 | Our story | Why the foundation started, signed by Maureen Chebet |
 | Get involved | Donate, help with shipping, sort and pack, spread the word |
-| Contact | WhatsApp, Call and Email buttons |
-| Footer | Quick links and phone number |
+| Contact | WhatsApp and Email buttons |
+| Footer | Quick links and WhatsApp |
 
 ## How visitors contact the foundation
 
 There is no backend, so the site never collects or stores anything. Every contact button hands the visitor off to an app on their own device:
 
 - **WhatsApp:** opens a chat with a pre-filled message ("Hi Bundle Up Care, I'd like to donate.")
-- **Call:** `tel:` link that opens the phone dialer
 - **Email:** `mailto:` link that opens the visitor's email app
 
-Maureen receives messages directly in her own WhatsApp, phone and inbox. This is deliberate, because a form on a static page can't send anything to anyone without a backend service.
+Maureen receives messages directly in her own WhatsApp and inbox. This is deliberate, because a form on a static page can't send anything to anyone without a backend service.
 
 ## Things to update before going live
 
 1. **Email address.** `hello@bundleupcare.org` is a placeholder. Search the file for it and replace it with the real address (it appears in the contact section).
-2. **WhatsApp message.** To change the pre-filled text, find `wa.me/447464612369?text=` and edit the URL-encoded text after it.
-3. **Phone number.** Search for `447464612369` (WhatsApp and call links) and `+44 7464 612369` (displayed text).
+2. **WhatsApp message.** To change the pre-filled text, find `wa.me/` followed by the number, then `?text=`, and edit the URL-encoded text after it.
+3. **WhatsApp number.** The number is not shown on the page, but it is inside the WhatsApp links (`wa.me/...`). Search for `wa.me` to change it.
 4. **Story wording.** The "Our story" text is a draft. Maureen should edit it into her own words.
 5. **Social links.** None are included yet. Add Instagram, Facebook or TikTok links to the footer once the accounts exist.
 
@@ -64,11 +62,11 @@ Change a value once and it updates everywhere. A dark theme is included and foll
 
 **Fonts:** Fraunces for headings, Karla for body text, Petit Formal Script for the single script accent word.
 
-## Hosting
+## Hosting and domain
 
-The site is hosted on **Vercel** with the custom domain `bundleupfoundation.org`. Any static host would also work (Netlify, GitHub Pages), since the site is one plain HTML file.
+The site is hosted on **Vercel**, which provides the default `bundle-up-care-foundation.vercel.app` address. The custom domain `bundleupfoundation.org` (and `www.bundleupfoundation.org`) was bought from **Namecheap** and connected to the Vercel project. Any static host would also work, since the site is one plain HTML file.
 
-Vercel does not host email. For a `hello@bundleupfoundation.org` address, use free email forwarding through the domain registrar or Cloudflare, or a mailbox from Zoho Mail or Google Workspace.
+Vercel does not host email. For a `hello@bundleupfoundation.org` address, Namecheap offers email forwarding with the domain (to Maureen's Gmail, for example), or a mailbox can be added through Zoho Mail or Google Workspace. Where the forwarding is set up depends on whether the domain's DNS is managed at Namecheap or at Vercel.
 
 ## Making changes later
 
@@ -78,10 +76,11 @@ Because everything lives in one file, edits are simple text changes. The one exc
 
 - **Live site:** https://www.bundleupfoundation.org (the root domain `bundleupfoundation.org` redirects here)
 - **Backup address:** https://bundle-up-care-foundation.vercel.app
-- **Hosting:** Vercel, with the custom domain configured and verified
+- **Hosting:** Vercel. The `vercel.app` address is the only link Vercel provided
+- **Domain:** `bundleupfoundation.org` was bought from Namecheap and connected to the Vercel project
 - Links, logo, fonts and WhatsApp button tested and working
 - Placeholder email (`hello@bundleupcare.org`) still needs replacing with a real address
-- No donor-tracking or payment features yet. Contact is by WhatsApp, call and email only
+- No donor-tracking or payment features yet. Contact is by WhatsApp and email only
 
 ## Redeploying after a change
 
